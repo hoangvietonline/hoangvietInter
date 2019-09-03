@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +7,6 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true">
-
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -115,7 +113,6 @@
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
             android:weightSum="3"
-
             app:layout_constraintTop_toBottomOf="@+id/btnLogin">
 
             <View
@@ -144,57 +141,39 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnTwiter"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_edit"
+            android:drawableStart="@drawable/twitter"
+            android:paddingStart="20dp"
+            android:text="@string/twitter"
+            android:textColor="#4389C0"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnFacebook"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout"
+            app:layout_constraintVertical_bias="0.4" />
 
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent">
-
-                <Button
-                    android:id="@+id/btnTwiter"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/button_edit"
-                    android:drawableStart="@drawable/twitter"
-                    android:paddingStart="20dp"
-                    android:text="@string/twitter"
-                    android:textColor="#4389C0"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/btnFacebook"
-                    app:layout_constraintTop_toTopOf="parent"
-
-                    />
-
-                <Button
-                    android:id="@+id/btnFacebook"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/button_edit"
-                    android:drawableStart="@drawable/facebook"
-                    android:paddingStart="20dp"
-                    android:text="@string/facebook"
-                    android:textColor="#4389C0"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btnTwiter"
-                    app:layout_constraintHorizontal_chainStyle="spread_inside"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </android.support.constraint.ConstraintLayout>
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnFacebook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_edit"
+            android:drawableStart="@drawable/facebook"
+            android:paddingStart="20dp"
+            android:text="@string/facebook"
+            android:textColor="#4389C0"
+            app:layout_constraintBottom_toBottomOf="@id/btnTwiter"
+            app:layout_constraintEnd_toStartOf="@+id/btnTwiter"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnTwiter" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
